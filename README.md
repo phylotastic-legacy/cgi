@@ -21,9 +21,9 @@ NOTE: It is necessary at some points in the workflow to extract specific data fr
 
 ## Controller Service
 
-input file: mock-data/input-taxa-names.txt
+input: mock-data/input-taxa-names.txt
 
-output file: mock-data/pruner-output.nexml
+output: mock-data/pruner-output.nexml
 
 CLI invocation:    
 
@@ -49,6 +49,7 @@ CLI invocation:
     ./tnrs_stub.pl < mock-data/input-taxa-names.txt
 
 CGI invocation (2 steps):
+
      # generates JSON doc with polling URL: {"uri":"http://phylotastic-wg.nescent.org/~benv/cgi-bin/tnrs_stub.pl?poll=abc"}
      curl --data-urlencode query="$(perl -pe 'chomp if eof' mock-data/input-taxa-names.txt)" http://phylotastic-wg.nescent.org/~benv/cgi-bin/tnrs_stub.pl
      # generates final output (mock-data/tnrs-output.json)
