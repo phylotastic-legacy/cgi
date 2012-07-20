@@ -40,9 +40,9 @@ CGI invocation:
                     
 ## Taxonomic Name Resolution (TNRS) Service
 
-input: mock-data/input-taxa-names.txt
+input: [input-taxa-names.txt](https://github.com/phylotastic/cgi/blob/master/mock-data/input-taxa-names.txt)
 
-output: mock-data/tnrs-output.json 
+output: [tnrs-output.json](https://github.com/phylotastic/cgi/blob/master/mock-data/tnrs-output.json)
 
 CLI invocation: 
 
@@ -62,7 +62,7 @@ input:
     # extracts species URIs from TNRS service output 
     ./jsonpath.pl --values $(cat mock-data/tnrs-output-uris.dpath) mock-data/tnrs-output.json 
 
-output: mock-data/treestore-output.json
+output: [treestore-output.json](https://github.com/phylotastic/cgi/blob/master/mock-data/treestore-output.json)
 
 CLI invocation:
 
@@ -79,7 +79,7 @@ input:
     # extracts tree URI from tree store service output and species URIs from TNRS service output
     cat <(./jsonpath.pl --keys '*' mock-data/treestore-output.json) <(./jsonpath.pl --values '/names/*/matches/*/uri' mock-data/tnrs-output.json)
 
-output: mock-data/pruner-output.nexml
+output: [pruner-output.nexml](https://github.com/phylotastic/cgi/blob/master/mock-data/pruner-output.nexml)
 
 CLI invocation:
 
@@ -91,9 +91,9 @@ CGI invocation:
 
 ## Scaler Service
 
-input: mock-data/pruner-output.nexml
+input: [pruner-output.nexml](https://github.com/phylotastic/cgi/blob/master/mock-data/pruner-output.nexml)
 
-output: mock-data/scaler-output.nexml
+output: [scaler-output.nexml](https://github.com/phylotastic/cgi/blob/master/mock-data/scaler-output.nexml)
 
 CLI invocation:
 
