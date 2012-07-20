@@ -21,9 +21,9 @@ NOTE: It is necessary at some points in the workflow to extract specific data fr
 
 ## Controller Service
 
-input: mock-data/input-taxa-names.txt
+input: [input-taxa-names.txt](https://github.com/phylotastic/cgi/blob/master/mock-data/input-taxa-names.txt)
 
-output: mock-data/pruner-output.nexml
+output: [pruner-output.nexml](https://github.com/phylotastic/cgi/blob/master/mock-data/pruner-output.nexml)
 
 CLI invocation:    
 
