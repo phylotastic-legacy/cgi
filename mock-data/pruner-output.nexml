@@ -1,0 +1,64 @@
+<nex:nexml xmlns="http://www.nexml.org/2009"
+xmlns:pt="http://phylotastic.org/terms#" version="0.9"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xsi:schemaLocation="http://www.nexml.org/2009 http://www.nexml.org/2009/nexml.xsd"
+generator="Bio::Phylo::Project v.0.49_1660"
+xmlns:xml="http://www.w3.org/XML/1998/namespace"
+xmlns:nex="http://www.nexml.org/2009"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#" about="#nl18"
+xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <meta xsi:type="nex:LiteralMeta" content="MapReduce" id="ma19"
+  datatype="xsd:string" property="pt:pruner" />
+  <meta rel="pt:source"
+  href="http://phylotastic-wg.nescent.org/examples/rawdata/Bininda-emonds_2007_mammals.nex"
+  xsi:type="nex:ResourceMeta" id="ma20" />
+  <meta xsi:type="nex:LiteralMeta"
+  content="Rattus_rattus,Mus_musculus,Homo_sapiens,Pan_paniscus"
+  id="ma21" datatype="xsd:string" property="pt:species" />
+  <meta xsi:type="nex:LiteralMeta" content="mammals" id="ma22"
+  datatype="xsd:string" property="pt:treeid" />
+  <meta xsi:type="nex:LiteralMeta" content="exactMatch" id="ma23"
+  datatype="xsd:string" property="pt:tnrs" />
+  <otus id="os13">
+     <otu label="Rattus_rattus" id="ou14">
+        <meta rel="pt:uri" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=180362" xsi:type="nex:ResourceMeta" id="uri7" />
+        <meta rel="pt:uri" href="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10117" xsi:type="nex:ResourceMeta" id="uri8" />
+     </otu>
+     <otu label="Mus_musculus" id="ou15">
+        <meta rel="pt:uri" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=180366" xsi:type="nex:ResourceMeta" id="uri3" />
+        <meta rel="pt:uri" href="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090" xsi:type="nex:ResourceMeta" id="uri4" />
+     </otu>
+     <otu label="Homo_sapiens" id="ou17">
+        <meta rel="pt:uri" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=180092" xsi:type="nex:ResourceMeta" id="uri1" />
+        <meta rel="pt:uri" href="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606" xsi:type="nex:ResourceMeta" id="uri2" />
+     </otu>
+     <otu label="Pan_paniscus" id="ou16">
+        <meta rel="pt:uri" href="http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=573081" xsi:type="nex:ResourceMeta" id="uri5" />
+        <meta rel="pt:uri" href="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9597" xsi:type="nex:ResourceMeta" id="uri6" />
+     </otu>
+  </otus>
+  <trees otus="os13" id="ts12">
+    <tree xsi:type="nex:IntTree" id="te1">
+      <node root="true" label="1851" id="ne6" />
+      <node label="909" id="ne5" />
+      <node label="920" id="ne9" />
+      <node label="873" id="ne4" />
+      <node label="328" id="ne8" />
+      <node label="799" id="ne3" />
+      <node label="Rattus_rattus" id="ne7" otu="ou14" />
+      <node label="Mus_musculus" id="ne11" otu="ou15" />
+      <node label="Pan_paniscus" id="ne2" otu="ou16" />
+      <node label="Homo_sapiens" id="ne10" otu="ou17" />
+      <edge source="ne6" target="ne5" id="edge5" />
+      <edge source="ne6" target="ne9" id="edge9" />
+      <edge source="ne5" target="ne4" id="edge4" />
+      <edge source="ne9" target="ne8" id="edge8" />
+      <edge source="ne4" target="ne3" id="edge3" />
+      <edge source="ne8" target="ne7" id="edge7" />
+      <edge source="ne8" target="ne11" id="edge11" />
+      <edge source="ne3" target="ne2" id="edge2" />
+      <edge source="ne3" target="ne10" id="edge10" />
+    </tree>
+  </trees>
+</nex:nexml>

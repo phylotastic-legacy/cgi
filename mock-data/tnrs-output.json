@@ -1,0 +1,102 @@
+{
+  "metadata": {
+      "jobId": 1,
+      "submitDate": "2012-06-06T14:54Z",
+      "sources": [{
+          "sourceId": "ITIS",
+          "sourceName": "Integrated Taxonomic Information System",
+          "uri": "http://www.itis.gov/",
+          "rank": 1,
+          "status": "online",
+          "annotations": {"TSN": "Taxonomic Serial Number, ITIS' internal identifier"}
+      }, {
+          "sourceId": "NCBI Taxonomy",
+          "sourceName": "NCBI Taxonomy",
+          "uri": "http://www.ncbi.nlm.nih.gov/taxonomy",
+          "rank": 2,
+          "status": "online",
+          "annotations": { }
+      }]
+  },
+  "names": [{
+          "submittedName": "Rattus rattus",
+          "matchCount": 2,
+          "matches": [{
+              "sourceId": "ITIS",
+              "matchedName": "Rattus rattus",
+              "acceptedName": "Rattus rattus",
+              "uri": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180362",
+              "annotations": { "TSN": "180362" },
+              "score": 1.0
+          },
+          {
+              "sourceId": "NCBI Taxonomy",
+              "matchedName": "Rattus rattus",
+              "acceptedName": "Rattus rattus",
+              "uri": "http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10117",
+              "annotations": { },
+              "score": 1.0
+          }]
+      },
+      {
+          "submittedName": "Mus musculus",
+          "matchCount": 2,
+          "matches": [{
+              "sourceId": "ITIS",
+              "matchedName": "Mus musculus",
+              "acceptedName": "Mus musculus",
+              "uri": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180366",
+              "annotations": { "TSN": "180366" },
+              "score": 1.0
+          },
+          {
+              "sourceId": "NCBI Taxonomy",
+              "matchedName": "Mus musculus",
+              "acceptedName": "Mus musculus",
+              "uri": "http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090",
+              "annotations": { },
+              "score": 1.0
+          }]
+      },
+      {
+          "submittedName": "Homo sapiens",
+          "matchCount": 2,
+          "matches": [{
+              "sourceId": "ITIS",
+              "matchedName": "Homo sapiens",
+              "acceptedName": "Homo sapiens",
+              "uri": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180092",
+              "annotations": { "TSN": "180092" },
+              "score": 1.0
+          },
+          {
+              "sourceId": "NCBI Taxonomy",
+              "matchedName": "Homo sapiens",
+              "acceptedName": "Homo sapiens",
+              "uri": "http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606",
+              "annotations": { },
+              "score": 1.0
+          }]
+      },
+      {
+          "submittedName": "Pan paniscus",
+          "matchCount": 2,
+          "matches": [{
+              "sourceId": "ITIS",
+              "matchedName": "Pan paniscus",
+              "acceptedName": "Pan paniscus",
+              "uri": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=573081",
+              "annotations": { "TSN": "573081" },
+              "score": 1.0
+          },
+          {
+              "sourceId": "NCBI Taxonomy",
+              "matchedName": "Pan paniscus",
+              "acceptedName": "Pan paniscus",
+              "uri": "http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9597",
+              "annotations": { },
+              "score": 1.0
+          }]
+      }]
+}
+
