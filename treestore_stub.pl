@@ -16,6 +16,7 @@ use HelperMethods;
 use Data::DPath 'dpath'; 
 use Data::Dumper;
 use Getopt::Long;
+use Log::Log4perl qw(:easy);
 
 #----------------------------------------------------------------------
 # constants
@@ -47,6 +48,16 @@ use constant IS_CGI => exists $ENV{'GATEWAY_INTERFACE'};
 use constant TNRS_OUTPUT_FILE => catfile('mock-data', 'tnrs-output.json');
 use constant TNRS_OUTPUT_URIS_DPATH_FILE => catfile('mock-data', 'tnrs-output-uris.dpath');
 use constant TREESTORE_OUTPUT_FILE => catfile('mock-data', 'treestore-output.json');
+
+#----------------------------------------------------------------------
+# logging
+#----------------------------------------------------------------------
+
+# For debugging when owner of this script does not have read access to apache log.
+#close STDERR or HelperMethods::fatal($!, IS_CGI, 500);         
+#open STDERR, '>>/home/ben/temp/cgi.log' or HelperMethods::fatal($!, IS_CGI, 500);
+
+Log::Log4perl::easy_init(IS_CGI ? $WARN : $INFO);
 
 #----------------------------------------------------------------------
 # CGI/CLI parameter processing

@@ -82,7 +82,11 @@ my $http = LWP::UserAgent->new();
 # logging
 #----------------------------------------------------------------------
 
-Log::Log4perl->easy_init($INFO);
+# For debugging when owner of this script does not have read access to apache log.
+#close STDERR or HelperMethods::fatal($!, IS_CGI, 500);         
+#open STDERR, '>>/home/ben/temp/cgi.log' or HelperMethods::fatal($!, IS_CGI, 500);
+
+Log::Log4perl::easy_init(IS_CGI ? $WARN : $INFO);
 
 #----------------------------------------------------------------------
 # argument processing

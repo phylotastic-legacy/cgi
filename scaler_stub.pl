@@ -15,6 +15,7 @@ use File::Spec::Functions qw(catfile);
 use File::Slurp;
 use HelperMethods;
 use Getopt::Long;
+use Log::Log4perl qw(:easy);
 
 #----------------------------------------------------------------------
 # constants
@@ -27,6 +28,16 @@ HEREDOC
 use constant IS_CGI => exists $ENV{'GATEWAY_INTERFACE'};
 use constant MOCK_INPUT_TREE_FILE => catfile('mock-data', 'pruner-output.nexml');
 use constant MOCK_OUTPUT_TREE_FILE => catfile('mock-data', 'scaler-output.nexml');
+
+#----------------------------------------------------------------------
+# logging
+#----------------------------------------------------------------------
+
+# For debugging when owner of this script does not have read access to apache log.
+#close STDERR or HelperMethods::fatal($!, IS_CGI, 500);         
+#open STDERR, '>>/home/ben/temp/cgi.log' or HelperMethods::fatal($!, IS_CGI, 500);
+
+Log::Log4perl::easy_init(IS_CGI ? $WARN : $INFO);
 
 #----------------------------------------------------------------------
 # argument processing

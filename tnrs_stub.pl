@@ -14,6 +14,7 @@ use File::Slurp;
 use File::Spec::Functions qw(catfile);
 use HelperMethods;
 use Getopt::Long;
+use Log::Log4perl qw(:easy);
 
 #----------------------------------------------------------------------
 # constants
@@ -46,6 +47,16 @@ use constant IS_CGI => exists $ENV{'GATEWAY_INTERFACE'};
 use constant MOCK_INPUT_FILE => catfile('mock-data', 'input-taxa-names.txt');
 use constant MOCK_OUTPUT_FILE => catfile('mock-data', 'tnrs-output.json');
 use constant MOCK_POLL_ID => 'abc';
+
+#----------------------------------------------------------------------
+# logging
+#----------------------------------------------------------------------
+
+# For debugging when owner of this script does not have read access to apache log.
+#close STDERR or HelperMethods::fatal($!, IS_CGI, 500);         
+#open STDERR, '>>/home/ben/temp/cgi.log' or HelperMethods::fatal($!, IS_CGI, 500);
+
+Log::Log4perl::easy_init(IS_CGI ? $WARN : $INFO);
 
 #----------------------------------------------------------------------
 # CGI/CLI parameter processing
